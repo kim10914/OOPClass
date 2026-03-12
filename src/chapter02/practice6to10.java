@@ -2,7 +2,7 @@ package chapter02;
 
 import java.util.Scanner;
 
-public class practice6to10 {
+public class Practice6to10 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
 
@@ -149,5 +149,6 @@ public class practice6to10 {
             case "카페라떼" -> System.out.println(count2 * 3500 + "원입니다.");
             default -> System.out.println("잘못된 입력입니다.");
         }
+        sc.close();
     }
 }

@@ -2,7 +2,7 @@ package chapter02;
 
 import java.util.Scanner;
 
-public class practice1to5 {
+public class Practice1to5 {
     public static void main(String[] args) {
         // 1. 두 정수를 입력받아 합을 구하여 출력하는 프로그램을 작성 (Scanner 객체 이용)
         System.out.printf("두 정수를 입력하세요 >>");
@@ -55,5 +55,7 @@ public class practice1to5 {
             }
         };
         System.out.println(result);
+
+        sc.close();
     }
 }
