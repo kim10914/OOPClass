@@ -13,24 +13,21 @@ public class Assigment3 {
 
         // 4학년은 4.0 이상 장학금 대상, 1~3학년은 3.8이상 장학금 대상(switch -> 로)
         switch (year) {
-            case 4:
+            case 4 -> {
                 if (grade >= 4.0) {
                     System.out.println(studentNumber + "_" + name + "님은 장학금 대상자입니다.");
                 } else {
-                    System.out.println(studentNumber + "_" + name + "님은 장학금 대상자입니다.");
+                    System.out.println(studentNumber + "_" + name + "님은 장학금 대상자가 아닙니다.");
                 }
-                break;
-            case 1:
-            case 2:
-            case 3:
+            }
+            case 1, 2, 3 -> {
                 if (grade >= 3.8) {
                     System.out.println(studentNumber + "_" + name + "님은 장학금 대상자입니다.");
                 } else {
-                    System.out.println(studentNumber + "_" + name + "님은 장학금 대상자입니다.");
+                    System.out.println(studentNumber + "_" + name + "님은 장학금 대상자가 아닙니다.");
                 }
-                break;
-            default:
-                System.out.println(studentNumber + "_" + name + "님은 장학금 대상자입니다.");
+            }
+            default -> System.out.println("잘못된 학년입니다.");
         }
         sc.close();
     }
