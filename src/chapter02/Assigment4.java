@@ -29,23 +29,24 @@ public class Assigment4 {
         // 3의 배수 판단
         if (number % 3 == 0) {
             System.out.println("3의 배수");
-        }else{
-            System.out.println("3의 배수가 아닙니다."); 
+        } else {
+            System.out.println("3의 배수가 아닙니다.");
         }
 
         // 7의 배수 판단
         if (number % 7 == 0) {
             System.out.println("7의 배수");
-        }else{
+        } else {
             System.out.println("7의 배수가 아닙니다.");
         }
 
         // 두자리 수 판단
         if (number >= 10 && number <= 99) {
             System.out.println("두자리 수");
-        }else{
+        } else {
             System.out.println("두자리 수가 아닙니다.");
         }
+        sc.close();
 
     }
 }
