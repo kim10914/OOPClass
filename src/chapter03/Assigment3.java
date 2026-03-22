@@ -3,6 +3,11 @@ package chapter03;
 import java.util.Scanner;
 
 public class Assigment3 {
+    //    3. 실습문제 6번 수정. 프로그램이 시작되면 “단어입력”과 “단어검색”을 선택하도록 하는 출력문 실
+    //    행. “단어입력” 선택 시 영어와 한글의 쌍으로 구성된 5개의 단어 쌍을 입력 받아 2차원 배열에 저장
+    //    함. 2차원 배열이 다 채워지면 다시 “단어입력”과 “단어검색” 을 선택하도록 하는 출력문 실행.
+    //  ”단어검색” 선택 시 영어 단어를 입력 받아 매핑된 한글을 출력함. “exit”를 입력하면 프로그램을 종
+    //    료함.
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         String[][] dictionary = new String[5][2];
@@ -20,14 +25,14 @@ public class Assigment3 {
                 break; // 프로그램 종료
             } else if (choice.equals("단어입력")) {
                 System.out.println("영어 단어와 한글 뜻을 빈칸으로 분리하여 차례대로 입력하세요. (총 5쌍)");
-                
+
                 // 5개의 단어 쌍 입력받아 2차원 배열에 저장
                 for (int i = 0; i < 5; i++) {
                     System.out.print("[단어 " + (i + 1) + "] 영어 한글 입력: ");
                     dictionary[i][0] = scanner.next(); // 영어 저장
                     dictionary[i][1] = scanner.next(); // 한글 저장
                 }
-                
+
                 isDictFilled = true; // 배열이 다 채워짐을 표시
                 System.out.println("단어장 입력을 완료했습니다.");
 
@@ -37,10 +42,10 @@ public class Assigment3 {
                     System.out.println("단어장이 등록되어 있지 않습니다. '단어입력'을 먼저 수행해주세요.");
                     continue;
                 }
-                
+
                 System.out.print("검색할 영어 단어를 입력하세요: ");
                 String searchWord = scanner.next();
-                
+
                 // 검색어에 exit를 입력해도 프로그램 종료
                 if (searchWord.equals("exit")) {
                     System.out.println("프로그램을 종료합니다.");
@@ -65,7 +70,7 @@ public class Assigment3 {
                 System.out.println("알 수 없는 명령어입니다. 다시 선택해주세요.");
             }
         }
-        
+
         scanner.close();
     }
 }

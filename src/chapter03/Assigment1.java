@@ -4,8 +4,12 @@ import java.util.InputMismatchException; // 정수 입력이 아닐 경우.
 import java.util.Scanner;
 
 public class Assigment1 {
-    public static void main(String[] args) {
-        // 프로그램 실행 인자로 배열의 크기 받기
+        public static void main(String[] args) {
+//            1. 정수 배열에서 최댓값과 최솟값을 찾는 프로그램을 작성하시오. 단, 배열의 크기는 가변적이며 프
+//            로그램 실행 인자로 받아들임. 배열의 크기에 맞춰 배열의 원소에 저장할 값들을 입력 받아 저장하
+//            고 저장된 값들을 먼저 출력한 후 최댓값 및 최솟값을 출력하도록 함. 정수가 아닌 문자가 입력되면
+//            다시 입력 받도록 처리함. 음수도 허용되며 예외 처리를 포함하여야 함.
+            // 프로그램 실행 인자로 배열의 크기 받기
         if (args.length == 0) {
             System.out.println("실행 인자로 배열의 크기를 입력해주세요.");
             return;

@@ -4,6 +4,8 @@ import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public class Assigment2 {
+//    2. 10개의 수를 입력 받아 양수만 합산하는 프로그램을 작성하시오. 음수 및 0이 입력되거나 잘못된
+//    입력은 무시하고 다시 받음. Scanner 이용
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         int sum = 0;
