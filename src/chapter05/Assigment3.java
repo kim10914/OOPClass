@@ -101,7 +101,7 @@ public class Assigment3 {
                     }
                 }
             } catch (Exception e) {
-                System.out.println("입력 형식이 잘 못 됬었습니다.\n");
+                System.out.println("입력 형식이 잘 못 되었습니다.\n");
                 // 잘못된 입력이 들어온 경우 버퍼를 비워줌
                 scanner.nextLine();
             }
