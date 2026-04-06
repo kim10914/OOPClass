@@ -4,20 +4,20 @@ public class Assigment1 { // PersonEx 객체 지만, 컨벤션 상 Assigment로 
     public static void main(String[] args) {
         // Person 객체 생성 및 출력
         System.out.println("====== Person ======");
-        Person person = new Person("홍길동", 45);
+        Person person = new Person("홍길동", 31);
         person.describe();
         person.speak();
         person.eat();
 
         // Student 객체 생성 및 출력
         System.out.println("\n====== Student ======");
-        Student student = new Student("김철수", 20, "한국대학교", 2);
+        Student student = new Student("김철수", 20, "강원대학교", 2);
         student.describe();
         student.study();
 
         // StudentWorker 객체 생성 및 출력
         System.out.println("\n====== StudentWorker ======");
-        StudentWorker worker = new StudentWorker("이영희", 24, "대한대학교", 4, "우리카페", 150);
+        StudentWorker worker = new StudentWorker("이영희", 24, "강원대학교", 4, "우리카페", 150);
         worker.describe();
         worker.work();
 
