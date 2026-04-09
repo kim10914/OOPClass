@@ -70,11 +70,15 @@ public class Assigment2 {
         regularLine.drawLine();
         regularLine.eraseLine();
 
+        regularLine = null;
+
         System.out.println();
 
         ColoredLine coloredLine = new ColoredLine(10, 10, 20, 20, "Red");
         coloredLine.drawLine();
         coloredLine.eraseLine();
+
+        coloredLine = null;
     }
 
 }
