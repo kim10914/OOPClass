@@ -6,7 +6,7 @@ import java.util.Map;
 import java.util.NoSuchElementException;
 import java.util.Scanner;
 
-public class Assigment1 {
+public class Assignment1 {
     public static void main(String[] args) {
         // 영어 단어와 그에 대응하는 뜻을 저장하는 HashMap
         HashMap<String, String> wordBook = new HashMap<>();

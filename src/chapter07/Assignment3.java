@@ -3,7 +3,7 @@ package chapter07;
 import java.util.ArrayList;
 import java.util.Scanner;
 
-public class Assigment3 {
+public class Assignment3 {
     private static class Student {
         String studentId; // 학번
         String name; // 이름

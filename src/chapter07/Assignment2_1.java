@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.Scanner;
 
-public class Assigment2_1 {
+public class Assignment2_1 {
     // ArrayList 방식
     public static void main(String[] args) {
         try (Scanner scanner = new Scanner(System.in)) {
@@ -20,11 +20,12 @@ public class Assigment2_1 {
                     break;
                 }
 
-                int score = scanner.nextInt();
-                int time = scanner.nextInt();
-                ScoreInfo newInfo = new ScoreInfo(name, score, time);
-
-                if (list.size() < 3) {
+                int score = scanner.nextInt(); // 점수
+                int time = scanner.nextInt(); // 시간
+                ScoreInfo newInfo = new ScoreInfo(name, score, time); // 새 점수 정보 생성
+                
+                // 리스트에 새 점수 정보 추가
+                if (list.size() < 3) { // 톱3 미만인 경우 바로 추가
                     list.add(newInfo);
                 } else {
                     int minIndex = 0;
@@ -34,7 +35,7 @@ public class Assigment2_1 {
                         }
                     }
 
-                    if (newInfo.score > list.get(minIndex).score) {
+                    if (newInfo.score > list.get(minIndex).score) { // 새 점수가 최하 점수보다 높은 경우
                         System.out.println("최하 점수의 " + list.get(minIndex).name + "이 삭제됨");
                         list.remove(minIndex);
                         list.add(newInfo);
@@ -43,8 +44,8 @@ public class Assigment2_1 {
                     }
                 }
 
-                Iterator<ScoreInfo> it = list.iterator();
-                while (it.hasNext()) {
+                Iterator<ScoreInfo> it = list.iterator(); // 리스트의 점수 정보 출력
+                while (it.hasNext()) { // 리스트에 점수 정보가 남아있는 동안
                     ScoreInfo info = it.next();
                     System.out.print(info.toString() + " ");
                 }
