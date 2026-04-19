@@ -21,7 +21,7 @@ public class Assignment3 {
             this.assignment = assignment;
             this.midterm = midterm;
             this.finals = finals;
-            this.total = attendance * 0.1 + assignment * 0.3 + midterm * 0.3 + finals * 0.3;
+            this.total = attendance * 0.1 + assignment * 0.3 + midterm * 0.3 + finals * 0.3; // 총점 계산
             this.grade = calculateGrade(this.total);
         }
 

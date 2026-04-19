@@ -13,10 +13,11 @@ public class Assignment2_1 {
             System.out.println("*** 게임 톱3 관리 프로그램입니다. ***");
 
             while (true) {
-                System.out.print("이름 점수 게임시간 입력>>");
+                System.out.print("이름 점수 게임시간 입력(종료 : 그만)>>");
                 String name = scanner.next();
 
                 if (name.equals("그만")) {
+                    System.out.println("프로그램을 종료합니다.");
                     break;
                 }
 
