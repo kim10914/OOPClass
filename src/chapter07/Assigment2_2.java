@@ -2,6 +2,7 @@ package chapter07;
 
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.Iterator;
 import java.util.Map;
 import java.util.Scanner;
 
@@ -32,7 +33,9 @@ public class Assigment2_2 {
                     String minName = null;
                     int minScore = Integer.MAX_VALUE;
 
-                    for (Map.Entry<String, ScoreInfo> entry : top3Map.entrySet()) {
+                    Iterator<Map.Entry<String, ScoreInfo>> it = top3Map.entrySet().iterator();
+                    while (it.hasNext()) {
+                        Map.Entry<String, ScoreInfo> entry = it.next();
                         if (entry.getValue().score < minScore) {
                             minScore = entry.getValue().score;
                             minName = entry.getKey();
@@ -49,7 +52,9 @@ public class Assigment2_2 {
                 }
 
                 ArrayList<ScoreInfo> view = new ArrayList<>(top3Map.values());
-                for (ScoreInfo info : view) {
+                Iterator<ScoreInfo> viewIt = view.iterator();
+                while (viewIt.hasNext()) {
+                    ScoreInfo info = viewIt.next();
                     System.out.print(info + " ");
                 }
                 System.out.println();

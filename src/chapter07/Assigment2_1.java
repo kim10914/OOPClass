@@ -1,6 +1,7 @@
 package chapter07;
 
 import java.util.ArrayList;
+import java.util.Iterator;
 import java.util.Scanner;
 
 public class Assigment2_1 {
@@ -42,7 +43,9 @@ public class Assigment2_1 {
                     }
                 }
 
-                for (ScoreInfo info : list) {
+                Iterator<ScoreInfo> it = list.iterator();
+                while (it.hasNext()) {
+                    ScoreInfo info = it.next();
                     System.out.print(info.toString() + " ");
                 }
                 System.out.println();
