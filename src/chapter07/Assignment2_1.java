@@ -24,15 +24,15 @@ public class Assignment2_1 {
                 int score = scanner.nextInt(); // 점수
                 int time = scanner.nextInt(); // 시간
                 ScoreInfo newInfo = new ScoreInfo(name, score, time); // 새 점수 정보 생성
-                
+
                 // 리스트에 새 점수 정보 추가
                 if (list.size() < 3) { // 톱3 미만인 경우 바로 추가
                     list.add(newInfo);
                 } else {
-                    int minIndex = 0;
-                    for (int i = 1; i < list.size(); i++) {
-                        if (list.get(i).score < list.get(minIndex).score) {
-                            minIndex = i;
+                    int minIndex = 0; // 최하 점수의 인덱스를 초기화
+                    for (int i = 1; i < list.size(); i++) { // 리스트를 순회하며 최하 점수의 인덱스를 찾음
+                        if (list.get(i).score < list.get(minIndex).score) { // 현재 점수가 최하 점수보다 낮은 경우
+                            minIndex = i; // 최하 점수의 인덱스를 업데이트
                         }
                     }
 
