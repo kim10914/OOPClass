@@ -1,4 +1,5 @@
 package test;
+// 업 다운 캐스팅 학습
 
 class Animal {
     String name = "동물";
@@ -20,7 +21,7 @@ class Cat extends Animal {
     }
 }
 
-public class MiddleTest3 { // 업 다운 캐스팅 학습
+public class MiddleTest3 { 
     public static void main(String[] args) {
         // 1. 업캐스팅 (자식 → 부모): 자동, 안전
         Dog dog = new Dog();
