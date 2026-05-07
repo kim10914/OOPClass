@@ -1,5 +1,6 @@
 package chapter09;
 
+import java.awt.Container;
 import java.awt.GridBagLayout;
 
 import javax.swing.JFrame;
