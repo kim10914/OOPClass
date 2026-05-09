@@ -26,6 +26,6 @@ class Practice06Frame extends JFrame {
 
 public class Practice06 {
     public static void main(String[] args) {
-        SwingUtilities.invokeLater(Practice06Frame::new);
+     //   SwingUtilities.invokeLater(Practice06Frame::new);
     }
 }
