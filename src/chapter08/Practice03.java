@@ -3,8 +3,8 @@ package chapter08;
 import javax.swing.*;
 import java.awt.*;
 
-class Practice3Fram extends JFrame {
-    public Practice3Fram() {
+class Practice3Frame extends JFrame {
+    public Practice3Frame() {
         setTitle("FlowLayout Practice");
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
@@ -20,6 +20,6 @@ class Practice3Fram extends JFrame {
 
 public class Practice03 {
     public static void main(String[] args) {
-        SwingUtilities.invokeLater(Practice3Frame::new);
+        // SwingUtilities.invokeLater(Practice3Frame::new);
     }
 }
