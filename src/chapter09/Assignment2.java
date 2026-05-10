@@ -3,12 +3,10 @@ package chapter09;
 import java.awt.Color;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
-
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.SwingUtilities;
 
-// 2번 문제: 마우스 이벤트 처리
 // 드래그 시 레이블이 따라다니고, 클릭 시 좌표를 타이틀에 출력
 // 마우스가 프레임 밖으로 나가면 빨간색, 다시 들어오면 초록색
 // MouseAdapter 클래스 이용
@@ -27,13 +25,11 @@ class Assignment2Frame extends JFrame {
         setSize(500, 400);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
-        // content pane은 절대 위치 지정을 위해 레이아웃 제거
-        setLayout(null);
+        setLayout(null); // 절대 위치 지정 레이아웃으로 변경 (드래그 레이블 위치 제어를 위해)
 
-        // 레이블 초기 설정 (보이지 않게 시작)
-        dragLabel.setSize(80, 20);
-        dragLabel.setVisible(false);
-        add(dragLabel);
+        dragLabel.setSize(80, 20); // 레이블 크기 설정
+        dragLabel.setVisible(false); // 초기에는 보이지 않도록 설정
+        add(dragLabel); // 프레임에 레이블 추가
 
         // MouseAdapter로 마우스 이벤트 일괄 처리
         MouseAdapter mouseHandler = new MouseAdapter() {
@@ -79,8 +75,7 @@ class Assignment2Frame extends JFrame {
         // (드래그 이벤트는 MouseMotionListener 메서드이므로 두 번 등록 필요)
         getContentPane().addMouseListener(mouseHandler);
         getContentPane().addMouseMotionListener(mouseHandler);
-
-        setLocationRelativeTo(null);
+        
         setVisible(true);
     }
 }

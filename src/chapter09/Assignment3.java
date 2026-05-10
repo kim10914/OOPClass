@@ -3,10 +3,9 @@ package chapter09;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-
 import javax.swing.*;
 
-// 3번 문제: 전화걸기 프레임
+// 전화걸기 프레임
 // 상단: 입력된 번호와 상태 메시지가 표시되는 텍스트 영역
 // 하단: 통화/지움/종료 + 0~9, *, # 버튼 패널 (4행 3열)
 public class Assignment3 {
@@ -16,12 +15,12 @@ public class Assignment3 {
 }
 
 class Assignment3Frame extends JFrame {
-    // 번호 최대 입력 길이 (국제전화 포함 일반적인 상한)
+    // 번호 최대 입력 길이
     private static final int MAX_NUMBER_LENGTH = 20;
 
     // 입력된 번호와 메시지를 표시하는 텍스트 영역
     private final JTextArea displayArea = new JTextArea();
-    // 사용자가 누른 숫자가 누적되는 버퍼
+    // 사용자가 누른 숫자가 누적되는 버퍼 
     private final StringBuilder numberBuffer = new StringBuilder();
     // 통화 중 상태 플래그 (예외처리용)
     private boolean onCall = false;
@@ -30,14 +29,14 @@ class Assignment3Frame extends JFrame {
         setTitle("전화걸기");
         setSize(330, 480);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        setLayout(new BorderLayout());
+        setLayout(new BorderLayout()); // Content pane에 BorderLayout 적용(Content pane은 JFrame의 기본 레이아웃이므로 별도 선언 없이 사용)
 
         // 상단 텍스트 영역: 편집 불가, 멀티라인
         // 텍스트 영역 비율을 PDF에 맞춰 전체 높이의 약 1/5 수준으로 고정
-        displayArea.setEditable(false);
-        displayArea.setBorder(BorderFactory.createEmptyBorder(4, 6, 4, 6));
-        displayArea.setPreferredSize(new Dimension(0, 80));
-        add(displayArea, BorderLayout.NORTH);
+        displayArea.setEditable(false); // 사용자 편집 불가
+        displayArea.setBorder(BorderFactory.createEmptyBorder(4, 6, 4, 6)); // 텍스트 영역에 여백 추가
+        displayArea.setPreferredSize(new Dimension(0, 80)); // 높이 고정, 너비는 가변
+        add(displayArea, BorderLayout.NORTH); // 상단에 텍스트 영역 배치
 
         // 하단 버튼 패널 (5행 3열)
         JPanel buttonPanel = new JPanel(new GridLayout(5, 3, 2, 2));
@@ -114,16 +113,15 @@ class Assignment3Frame extends JFrame {
                 displayArea.setText(numberBuffer.toString());
             }
         };
-
+        
+        // 숫자/기호 버튼 생성 및 리스너 등록
         for (String key : keys) {
             JButton keyButton = new JButton(key);
             keyButton.addActionListener(keyListener);
             buttonPanel.add(keyButton);
         }
 
-        add(buttonPanel, BorderLayout.CENTER);
-
-        setLocationRelativeTo(null);
+        add(buttonPanel, BorderLayout.CENTER); 
         setVisible(true);
     }
 }
